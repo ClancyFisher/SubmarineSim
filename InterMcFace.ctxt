@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=
+comment0.target=InterMcFace()
+comment1.params=ae
+comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment10.params=mouse
+comment10.target=void\ mouseMoved(java.awt.event.MouseEvent)
+comment11.params=args
+comment11.target=void\ main(java.lang.String[])
+comment2.params=mouse
+comment2.target=void\ mouseClicked(java.awt.event.MouseEvent)
+comment3.params=mouse
+comment3.target=void\ mousePressed(java.awt.event.MouseEvent)
+comment4.params=mouse
+comment4.target=void\ mouseReleased(java.awt.event.MouseEvent)
+comment5.params=mouse
+comment5.target=void\ mouseEntered(java.awt.event.MouseEvent)
+comment6.params=mouse
+comment6.target=void\ mouseExited(java.awt.event.MouseEvent)
+comment7.params=mouse
+comment7.target=void\ mouseDragged(java.awt.event.MouseEvent)
+comment8.params=g
+comment8.target=void\ paintComponent(java.awt.Graphics)
+comment9.params=g
+comment9.target=void\ draw(java.awt.Graphics)
+numComments=12

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=x\ y
+comment0.target=Thing(int,\ int)
+comment1.params=
+comment1.target=java.awt.Point\ getPoint()
+comment2.params=
+comment2.target=void\ press()
+comment3.params=
+comment3.target=boolean\ isSelected()
+numComments=4
