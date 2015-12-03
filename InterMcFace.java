@@ -4,6 +4,7 @@ import java.awt.event.*;
 public class InterMcFace extends JPanel implements ActionListener, MouseListener, MouseMotionListener
 {   
     MapInterface Map = new MapInterface();
+    WeaponInterface Wep = new WeaponInterface();
     public InterMcFace()
     {
         setPreferredSize(new Dimension(1920,1080));
@@ -58,6 +59,7 @@ public class InterMcFace extends JPanel implements ActionListener, MouseListener
     public void draw(Graphics g)
     {
         g.drawImage(Map.getImage(), 660, 350, null);
+        g.drawImage(Wep.getImage(), 20, 350, null);
     }
     
     public void mouseMoved(MouseEvent mouse)
