@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=
-comment0.target=MapInterface()
+comment0.params=shp
+comment0.target=MapInterface(Ship)
 comment1.params=e
 comment1.target=void\ Clicked(java.awt.event.MouseEvent)
 comment2.params=

@@ -3,8 +3,13 @@ import javax.swing.*;
 import java.awt.event.*;
 public class InterMcFace extends JPanel implements ActionListener, MouseListener, MouseMotionListener
 {   
+<<<<<<< HEAD
     MapInterface Map = new MapInterface();
     WeaponInterface Wep = new WeaponInterface();
+=======
+    Ship shp = new Ship(100,100);
+    MapInterface Map = new MapInterface(shp);
+>>>>>>> df2304e5838f904672622a8a39ebb80f559eb704
     public InterMcFace()
     {
         setPreferredSize(new Dimension(1920,1080));
