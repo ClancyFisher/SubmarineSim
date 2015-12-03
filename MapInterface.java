@@ -4,19 +4,19 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 public class MapInterface
 {
+    Ship shp;
     Thing t = new Thing(400,400);
     Thing h = new Thing(250,300);
     ArrayList<Thing> things = new ArrayList<Thing>();
     Point mouse = new Point();
-    int shipX = 150;
-    int shipY = 0;
-    public MapInterface(){
+    public MapInterface(Ship shp){
+        this.shp = shp;
         things.add(t);
         things.add(h);
     }
     public void Clicked(MouseEvent e){
-        int x = (int)Math.round(e.getPoint().getX()) - 660 - shipX;
-        int y = (int)Math.round(e.getPoint().getY()) - 380 - shipY;
+        int x = (int)Math.round(e.getPoint().getX()) - 660 - shp.getX();
+        int y = (int)Math.round(e.getPoint().getY()) - 380 - shp.getY();
         Point alpha = new Point(x,y);
         mouse = alpha;
         for(Thing h : things){
@@ -41,8 +41,8 @@ public class MapInterface
         for(Thing h : things){
             g.setColor(Color.GREEN.darker());
             Point p = h.getPoint();
-            int thingX = (int)Math.round(p.getX())-5 + shipX;
-            int thingY = (int)Math.round(p.getY())-5 + shipY;
+            int thingX = (int)Math.round(p.getX())-5 + shp.getX();
+            int thingY = (int)Math.round(p.getY())-5 + shp.getY();
             g.fillOval(thingX,thingY,10,10);
             if(h.isSelected()){
                 g.setColor(Color.CYAN);
