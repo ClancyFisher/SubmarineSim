@@ -60,7 +60,7 @@ public class Radar
             g.fillOval(thingX,thingY,10,10);
             g.drawString(thingX + ", " + thingY, thingX-20,thingY-10);
             if(h.isSelected()){
-                g.setColor(Color.CYAN);
+                g.setColor(Color.GREEN);
                 g.drawOval(thingX - 5,thingY - 5,20,20);
             }
         }

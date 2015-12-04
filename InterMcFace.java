@@ -10,7 +10,7 @@ public class InterMcFace extends JPanel implements ActionListener, MouseListener
 
     WeaponInterface Wep = new WeaponInterface();
     Ship shp = new Ship(100,100);
-    Radar radar = new Radar(shp,660,437);
+    Radar radar = new Radar(shp,659,437);
     BufferedImage img = null;
     public InterMcFace()
     {
@@ -19,8 +19,8 @@ public class InterMcFace extends JPanel implements ActionListener, MouseListener
         setBackground(Color.BLUE.darker());
         
         JFrame frame = new JFrame("InterMcFramealoo");
-        //frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-        //frame.setUndecorated(true);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+        frame.setUndecorated(true);
         frame.add(this);
         frame.pack();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -75,7 +75,9 @@ public class InterMcFace extends JPanel implements ActionListener, MouseListener
     public void draw(Graphics g)
     {
         g.drawImage(img,0,0,null);
-        g.drawImage(radar.getImage(), 660, 437, null);
+        g.drawImage(radar.getImage(), 659, 437, null);
+        //g.setColor(Color.GREEN.darker());
+        //g.drawRect(659, 437, 600, 600);
         //g.drawImage(Wep.getImage(), 20, 350, null);
         
     }
