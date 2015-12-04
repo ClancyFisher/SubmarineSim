@@ -10,7 +10,7 @@ public class InterMcFace extends JPanel implements ActionListener, MouseListener
 
     WeaponInterface Wep = new WeaponInterface();
     Ship shp = new Ship(100,100);
-    MapInterface Map = new MapInterface(shp);
+    Radar radar = new Radar(shp,660,437);
     BufferedImage img = null;
     public InterMcFace()
     {
@@ -44,16 +44,21 @@ public class InterMcFace extends JPanel implements ActionListener, MouseListener
     
     public void mouseClicked(MouseEvent mouse) 
     {
-        Point m = mouse.getPoint();
-        if((m.getX() > 660 && m.getX() < 600+660 && m.getY() > 350 && m.getY() < 600+350)){
-            Map.Clicked(mouse);
-        }
-        return;
+        
     }
 
     public void mousePressed(MouseEvent mouse) {}
 
-    public void mouseReleased(MouseEvent mouse) {}
+    public void mouseReleased(MouseEvent mouse) 
+    {
+        Point m = mouse.getPoint();
+        System.out.println(m.getX() + ", " + m.getY());
+        if(radar.getBounds().contains(m))
+        {
+            radar.click(m.x,m.y);
+        }
+        repaint();
+    }
 
     public void mouseEntered(MouseEvent mouse) {}
 
@@ -70,7 +75,7 @@ public class InterMcFace extends JPanel implements ActionListener, MouseListener
     public void draw(Graphics g)
     {
         g.drawImage(img,0,0,null);
-        g.drawImage(Map.getImage(), 660, 437, null);
+        g.drawImage(radar.getImage(), 660, 437, null);
         //g.drawImage(Wep.getImage(), 20, 350, null);
         
     }
