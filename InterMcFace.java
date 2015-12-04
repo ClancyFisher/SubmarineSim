@@ -1,15 +1,17 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
+
 public class InterMcFace extends JPanel implements ActionListener, MouseListener, MouseMotionListener
 {   
-<<<<<<< HEAD
-    MapInterface Map = new MapInterface();
+
     WeaponInterface Wep = new WeaponInterface();
-=======
     Ship shp = new Ship(100,100);
     MapInterface Map = new MapInterface(shp);
->>>>>>> df2304e5838f904672622a8a39ebb80f559eb704
+    BufferedImage img = null;
     public InterMcFace()
     {
         setPreferredSize(new Dimension(1920,1080));
@@ -26,6 +28,10 @@ public class InterMcFace extends JPanel implements ActionListener, MouseListener
         frame.addMouseListener(this);
         frame.addMouseMotionListener(this);
        
+        try {
+            img = ImageIO.read(new File("InterfaceLayout.png"));
+        } catch (Exception e) {
+        }
         
         Timer t = new Timer(5, this);
         t.start();
@@ -63,8 +69,10 @@ public class InterMcFace extends JPanel implements ActionListener, MouseListener
     
     public void draw(Graphics g)
     {
-        g.drawImage(Map.getImage(), 660, 350, null);
-        g.drawImage(Wep.getImage(), 20, 350, null);
+        g.drawImage(img,0,0,null);
+        g.drawImage(Map.getImage(), 660, 437, null);
+        //g.drawImage(Wep.getImage(), 20, 350, null);
+        
     }
     
     public void mouseMoved(MouseEvent mouse)

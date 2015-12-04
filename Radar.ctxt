@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=s\ t\ locx\ locy
+comment0.target=Radar(Ship,\ java.util.ArrayList,\ int,\ int)
+comment1.params=
+comment1.target=java.awt.Rectangle\ getBounds()
+comment2.params=x\ y
+comment2.target=void\ click(int,\ int)
+comment3.params=g
+comment3.target=void\ render(java.awt.Graphics)
+numComments=4
