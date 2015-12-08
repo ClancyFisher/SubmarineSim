@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Ship()
+comment1.params=g\ sx\ sy
+comment1.target=void\ drawShip(java.awt.Graphics,\ int,\ int)
+comment2.params=sy
+comment2.target=void\ update(int)
+numComments=3
