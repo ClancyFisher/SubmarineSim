@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=WeaponInterface()
-comment1.params=mouse
-comment1.target=void\ DragonWithAids(java.awt.event.MouseEvent)
-numComments=2
+comment1.params=
+comment1.target=java.awt.image.BufferedImage\ getImage()
+comment2.params=mouse
+comment2.target=void\ DragonWithAids(java.awt.event.MouseEvent)
+numComments=3
